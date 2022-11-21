@@ -10,8 +10,6 @@ const arrStories=[
 {imagem: "assets/img/memeriagourmet.svg", user: "memeriagourmet"},
 ]
 
-arrStories.map( (n) => console.log (n.imagem))
-
 return (
 
     <div className="stories">
