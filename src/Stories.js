@@ -1,82 +1,30 @@
 export default function Stories(){
+const arrStories=[
+{imagem: "assets/img/9gag.svg", user: "9gag"},
+{imagem: "assets/img/meowed.svg", user: "meowed"},
+{imagem: "assets/img/barked.svg", user: "barked"},
+{imagem: "assets/img/nathanwpylestrangeplanet.svg", user: "nathanwpylestrangeplanet"},
+{imagem: "assets/img/wawawicomics.svg", user: "wawawicomics"},
+{imagem: "assets/img/respondeai.svg", user: "respondeai"},
+{imagem: "assets/img/filomoderna.svg", user: "filomoderna"},
+{imagem: "assets/img/memeriagourmet.svg", user: "memeriagourmet"},
+]
+
+arrStories.map( (n) => console.log (n.imagem))
+
 return (
+
     <div className="stories">
+{arrStories.map( (n) => 
     <div className="story">
-      <div className="imagem">
-        <img src="assets/img/9gag.svg" />
-       
-      </div>
-      <div className="usuario">
-        9gag
-      </div>
+    <div className="imagem">
+      <img src= {n.imagem}/>
     </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/meowed.svg" />
-      </div>
-      <div className="usuario">
-        meowed
-      </div>
-    </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/barked.svg" />
-      </div>
-      <div className="usuario">
-        barked
-      </div>
-    </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/nathanwpylestrangeplanet.svg" />
-      </div>
-      <div className="usuario">
-        nathanwpylestrangeplanet
-      </div>
-    </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/wawawicomics.svg" />
-      </div>
-      <div className="usuario">
-        wawawicomics
-      </div>
-    </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/respondeai.svg" />
-      </div>
-      <div className="usuario">
-        respondeai
-      </div>
-    </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/filomoderna.svg" />
-      </div>
-      <div className="usuario">
-        filomoderna
-      </div>
-    </div>
-
-    <div className="story">
-      <div className="imagem">
-        <img src="assets/img/memeriagourmet.svg" />
-      </div>
-      <div className="usuario">
-        memeriagourmet
-      </div>
-    </div>
-
-    <div className="setinha">
-      <ion-icon name="chevron-forward-circle"></ion-icon>
+    <div className="usuario">
+     {n.user}
     </div>
   </div>
-)
-}
+)}
+
+    </div>
+)}

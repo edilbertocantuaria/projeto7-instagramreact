@@ -13,7 +13,7 @@ export default function NavBar(){
           </div>
   
           <div className="instagram-mobile">
-            <img src="public/public/assets/img/logo.png" />
+            <img src="assets/img/logo.png" />
           </div>
   
           <div className="pesquisa">
