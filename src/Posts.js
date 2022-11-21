@@ -5,7 +5,7 @@ export default function Posts(){
         <div className="post">
           <div className="topo">
             <div className="usuario">
-              <img src="public\assets\img\meowed.svg" />
+              <img src="assets/img/meowed.svg" />
 
             </div>
             <div className="acoes">
@@ -14,7 +14,7 @@ export default function Posts(){
           </div>
 
           <div className="conteudo">
-            <img src="public\assets\img\gato-telefone.svg" />
+            <img src="assets/img/gato-telefone.svg" />
           </div>
 
           <div className="fundo">
@@ -30,7 +30,7 @@ export default function Posts(){
             </div>
 
             <div className="curtidas">
-              <img src="public\assets\img\respondeai.svg" />
+              <img src="assets/img/respondeai.svg" />
               <div className="texto">
                 Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
               </div>
@@ -41,7 +41,7 @@ export default function Posts(){
         <div className="post">
           <div className="topo">
             <div className="usuario">
-              <img src="public\assets\img\barked.svg" />
+              <img src="assets/img/barked.svg" />
               barked
             </div>
             <div className="acoes">
@@ -50,7 +50,7 @@ export default function Posts(){
           </div>
 
           <div className="conteudo">
-            <img src="public\assets\img\dog.svg" />
+            <img src="assets/img/dog.svg" />
           </div>
 
           <div className="fundo">
@@ -66,7 +66,7 @@ export default function Posts(){
             </div>
 
             <div className="curtidas">
-              <img src="public\assets\img\adorable_animals.svg" />
+              <img src="assets/img/adorable_animals.svg" />
               <div className="texto">
                 Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
               </div>

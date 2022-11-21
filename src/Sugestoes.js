@@ -8,7 +8,7 @@ export default function Sugestoes(){
 
         <div className="sugestao">
           <div className="usuario">
-            <img src="public/assets/img/bad.vibes.memes.svg" />
+            <img src="assets/img/bad.vibes.memes.svg" />
             <div className="texto">
               <div className="nome">bad.vibes.memes</div>
               <div className="razao">Segue você</div>
@@ -20,7 +20,7 @@ export default function Sugestoes(){
 
         <div className="sugestao">
           <div className="usuario">
-            <img src="public/assets/img/chibirdart.svg" />
+            <img src="assets/img/chibirdart.svg" />
             <div className="texto">
               <div className="nome">chibirdart</div>
               <div className="razao">Segue você</div>
@@ -32,7 +32,7 @@ export default function Sugestoes(){
 
         <div className="sugestao">
           <div className="usuario">
-            <img src="public/assets/img/razoesparaacreditar.svg" />
+            <img src="assets/img/razoesparaacreditar.svg" />
             <div className="texto">
               <div className="nome">razoesparaacreditar</div>
               <div className="razao">Novo no Instagram</div>
@@ -44,7 +44,7 @@ export default function Sugestoes(){
 
         <div className="sugestao">
           <div className="usuario">
-            <img src="public/assets/img/adorable_animals.svg" />
+            <img src="assets/img/adorable_animals.svg" />
             <div className="texto">
               <div className="nome">adorable_animals</div>
               <div className="razao">Segue você</div>
@@ -56,7 +56,7 @@ export default function Sugestoes(){
 
         <div className="sugestao">
           <div className="usuario">
-            <img src="public/assets/img/smallcutecats.svg" />
+            <img src="assets/img/smallcutecats.svg" />
             <div className="texto">
               <div className="nome">smallcutecats</div>
               <div className="razao">Segue você</div>

@@ -3,7 +3,7 @@ return (
     <div className="stories">
     <div className="story">
       <div className="imagem">
-        <img src="public/assets/img/9gag.svg" />
+        <img src="assets/img/9gag.svg" />
        
       </div>
       <div className="usuario">
@@ -13,7 +13,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\meowed.svg" />
+        <img src="assets/img/meowed.svg" />
       </div>
       <div className="usuario">
         meowed
@@ -22,7 +22,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\barked.svg" />
+        <img src="assets/img/barked.svg" />
       </div>
       <div className="usuario">
         barked
@@ -31,7 +31,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\nathanwpylestrangeplanet.svg" />
+        <img src="assets/img/nathanwpylestrangeplanet.svg" />
       </div>
       <div className="usuario">
         nathanwpylestrangeplanet
@@ -40,7 +40,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\wawawicomics.svg" />
+        <img src="assets/img/wawawicomics.svg" />
       </div>
       <div className="usuario">
         wawawicomics
@@ -49,7 +49,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\respondeai.svg" />
+        <img src="assets/img/respondeai.svg" />
       </div>
       <div className="usuario">
         respondeai
@@ -58,7 +58,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\filomoderna.svg" />
+        <img src="assets/img/filomoderna.svg" />
       </div>
       <div className="usuario">
         filomoderna
@@ -67,7 +67,7 @@ return (
 
     <div className="story">
       <div className="imagem">
-        <img src="public\assets\img\memeriagourmet.svg" />
+        <img src="assets/img/memeriagourmet.svg" />
       </div>
       <div className="usuario">
         memeriagourmet
