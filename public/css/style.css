@@ -400,3 +400,13 @@ ion-icon {
   margin-left: 5px;
 }
 
+.coracaoCurtido{
+  color: red;
+}
+
+.coracaoBranco  ion-icon{
+  color: white;
+}
+
+
+
