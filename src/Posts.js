@@ -11,17 +11,17 @@ export default function Posts(){
         ]
 
 
-        const coracaoBranco =<ion-icon name="heart-outline" class="coracaoBranco" onClick={curtirPost}></ion-icon>
+        const coracaoBranco =<ion-icon name="heart-outline" class="coracaoBranco" onClick={curtirPost} data-test="like-post"></ion-icon>
         const [curtida, setCurtida] = React.useState(coracaoBranco)
 
 
-      const nsalvar=<ion-icon name="bookmark-outline" class="semSalvar" onClick={salvarPost}></ion-icon>
+      const nsalvar=<ion-icon name="bookmark-outline" class="semSalvar" onClick={salvarPost} data-test="save-post"></ion-icon>
       const [salvar, setSalvar] = React.useState(nsalvar)
 
 
 
         function salvarPost(){
-          let salvo = <ion-icon name="bookmark" class="salvo" onClick={dessalvarPost}></ion-icon>
+          let salvo = <ion-icon name="bookmark" class="salvo" onClick={dessalvarPost}  data-test="save-post"></ion-icon>
           setSalvar(salvo);
         }
 
@@ -31,7 +31,7 @@ export default function Posts(){
         }
 
         function curtirPost(){
-          let coracaoCurtido = <ion-icon name="heart" class="coracaoCurtido" onClick={descurtirPost}></ion-icon>
+          let coracaoCurtido = <ion-icon name="heart" class="coracaoCurtido" onClick={descurtirPost} data-test="like-post"></ion-icon>
          // aumentarCurtida();
           setCurtida(coracaoCurtido);
         }
@@ -42,15 +42,14 @@ export default function Posts(){
           setCurtida(coracaoCurtido);
         }
 
-
     return (
         <div className="posts">
 
         {arrPosts.map( (n) =>
-        <div className="post">
+        <div className="post" data-test="post">
           <div className="topo">
             <div className="usuario">
-              <img src={n.imgUsuario}/>
+              <img src={n.imgUsuario} onClick={curtirPost}/>
              {n.nomeUsuario}
             </div>
             <div className="acoes">
@@ -59,7 +58,7 @@ export default function Posts(){
           </div>
 
           <div className="conteudo">
-            <img src={n.publicacao} />
+            <img src={n.publicacao} data-test="post-image"/>
           </div>
 
           <div className="fundo">
@@ -77,7 +76,7 @@ export default function Posts(){
             <div className="curtidas">
               <img src={n.fotoQuemCurtiu} />
               <div className="texto">
-                Curtido por <strong>{n.quemCurtiu}</strong> e <strong>outras {n.qtdCurtidas} pessoas</strong>
+                Curtido por <strong>{n.quemCurtiu}</strong> e <strong data-test="likes-number">outras {n.qtdCurtidas} pessoas</strong>
               </div>
             </div>
           </div>
