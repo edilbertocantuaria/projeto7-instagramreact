@@ -1,0 +1,43 @@
+/*Quando a tela ficar com 935px ou menos, isso deve acontecer:*/
+@media (max-width: 935px) {
+  .cantoDireito {
+    display: none;
+  }
+}
+
+/*Quando a tela ficar com 614px ou menos, isso deve acontecer:*/
+@media (max-width: 614px) {
+  .barraSuperiorMobile {
+    display: flex;
+  }
+
+  .barraSuperior {
+    display: none;
+  }
+
+  .stories {
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: #fafafa;
+    border: none;
+  }
+
+  .stories > ion-icon {
+    display: none;
+  }
+
+  .post {
+    width: 100%;
+  }
+
+  .escreverComentário input {
+    max-width: 280px;
+    /*width: auto;*/
+  }
+
+  .barraInferiorMobile {
+    display: flex;
+  }
+}
+/*---------------------------------------*/

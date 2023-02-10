@@ -1,307 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: #FAFAFA;
-  margin: 54px 0 0;
-  font-family: 'Roboto', sans-serif;
-  color: #262626;
-  font-weight: 400;
-  font-size: 14px;
+  width: 100%;
+  height: 2000px;
+  overflow: auto;
+
+  background-color: #fafafa;
 }
 
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 54px;
-  border-bottom: 1px solid #DBDBDB;
+/*Bordas*/
+.barraVertical {
+  width: 1px;
+  height: 22px;
+  background: #dbdbdb;
+}
+/*--------------------------------------*/
+
+/*Ajustes ícones*/
+ion-icon {
   font-size: 22px;
-  background-color: #FFF;
+}
+
+.setaStory {
+  color: #ffffff;
+
+  position: absolute;
+  top: 47px;
+  right: 10px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 3;
+}
+
+.iconePubli {
+  font-size: 16px;
+}
+
+.heartComent {
+  color: #dbdbdb;
+  font-size: 12px;
+}
+
+.redHeart {
+  color: red;
+}
+/*--------------------------------------*/
+
+/*Ajustes textuais*/
+.story h1 {
+  /*Coloca reticências no texto do perfil dos stories automaticamente*/
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden; /* "overflow" value must be different from "visible" */
+  text-overflow: ellipsis;
+  color: #262626;
+
+  font-size: 12px;
+}
+
+.publi h1 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 15px;
+
+  color: #262626;
+}
+
+.publi h2 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 15px;
+
+  color: #262626;
+}
+
+.sugestao h1 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #262626;
+}
+
+.sugestao h2 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #8e8e8e;
+}
+
+.curtida {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 5px;
+  color: #000000;
+}
+
+.curtida span {
+  font-weight: 500;
+}
+
+.mencao {
+  color: #0f9bf7;
+}
+
+.sugPVc h1 {
+  width: 117px;
+  height: 15px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #8e8e8e;
+
+  display: flex;
+  align-items: center;
+}
+
+.sugPVc h2 {
+  width: 55px;
+  height: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #262626;
+
+  align-items: center;
+  text-align: right;
+}
+
+.sobreInstagram h1 {
+  font-size: 11px;
+  line-height: 13px;
+  color: #c7c7c7;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.maisComentario {
+  color: #c7c7c7;
+}
+
+/*--------------------------------------*/
+
+/*Distribuição do espacço*/
+.SpaceAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.centVertHor {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.centVertHor2 {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centHor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centVert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centVert2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.centVert3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.espHoriz {
+  display: flex;
+  align-items: center;
+}
+.espHoriz2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.espDirPubli {
+  margin-right: 16px;
+}
+
+.espEsqPubli {
+  margin-left: 16px;
+}
+
+.espEsqPubli2 {
+  margin-left: 0px;
+}
+
+/*--------------------------------------*/
+
+/*Tudo do menu superior e inferior*/
+.barraSuperior {
+  width: 100%;
+  height: 54px;
+  background-color: #ffffff;
+  opacity: 0.95;
+  border-bottom: solid #dbdbdb 1px;
+
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
 }
+.barraSuperiorMobile {
+  display: none; /*Nao vai aparecer qndo width>614px*/
+  width: 100%;
+  height: 54px;
 
-.navbar ion-icon, .navbar img {
+  background-color: #ffffff;
+  opacity: 0.95;
+  border-bottom: solid #dbdbdb 1px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
   cursor: pointer;
 }
 
-.navbar .container {
-  width: 100%;
-  max-width: 935px;
+.menu {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
 }
 
-.navbar .container > * {
+.pesquisar input {
+  width: 215px;
+  height: 26px;
+  background: #fafafa;
+  justify-content: center;
+  text-align: center;
+
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+
+  font-family: Roboto;
+  font-size: 12px;
+  color: #979797;
+}
+
+.e {
+  width: 146px;
+  height: 29px;
+}
+
+.d {
+  width: 148px;
+  height: 22px;
+}
+
+.barraInferiorMobile {
+  display: none; /*Nao vai mostrar quando width>614px*/
+  width: 100%;
+  height: 54px;
+  background-color: #ffffff;
+  opacity: 0.95;
+  border-bottom: solid #dbdbdb 1px;
+  margin-top: 20px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/*--------------------------------------*/
+
+/*Feed de Publicações*/
+main {
+  display: flex;
+  justify-content: center;
+
+  background: #fafafa;
+
+  margin-top: 54px;
+  margin-bottom: 54px;
+}
+
+/*--------------------------------------*/
+
+/*Canto esquerdo*/
+.cantoEsquerdo {
+  position: relative;
+}
+/*--------------------------------------*/
+
+/*Tudo sobre os stories*/
+.stories {
+  width: 614px;
+  height: 118px;
+  background: #ffffff;
+
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+
   display: flex;
   align-items: center;
-  height: 100%;
-}
-
-.navbar .logo img {
+  overflow: auto;
   position: relative;
-  top: 3px;
+
+  margin-top: 34px;
+  margin-bottom: 24px;
+  gap: 14px;
+  padding-left: 18px;
+
+  /* Para atender as funcionalidades do projeto, é recomendado não utilizar os seguintes comandos:
+  width: 100%;  -> vai ajustar a tela, ou seja, ao adicionar mais itens, vai aumentar o limite da largura.
+  justify-content: space-around; -> vai fazer com que o espaço entre os itens fique bem apertado entre eles, pq procura encaixar todos os itens dentro do espaço limitado
+  justify-items: center; - não prejudica o código, mas tbm não ajuda */
 }
 
-.navbar .logo .separador {
-  width: 1px;
-  height: 22px;
-  background-color: #DBDBDB;
-  margin: 0 10px;
-}
-
-.navbar .pesquisa input {
-  width: 215px;
-  height: 28px;
-  border-radius: 3px;
-  background-color: #FAFAFA;
-  border: 1px solid #DBDBDB;
-  color: #979797;
-  text-align: center;
-}
-
-.navbar .icones ion-icon {
-  margin: 0 5px;
-}
-
-.navbar .icones-mobile {
+.stories::-webkit-scrollbar {
   display: none;
 }
 
-.corpo {
-  display: flex;
-  justify-content: space-between;
-  width: 935px;
-  margin: 0 auto;
-  margin-top: 88px;
-}
-
-.esquerda {
-  width: 100%;
-  max-width: 614px;
-}
-
-.stories {
-  display: flex;
-  align-items: center;
-  height: 118px;
-  border-radius: 3px;
-  border: 1px solid #DBDBDB;
-  padding: 0 18px;
-  overflow: hidden;
-  position: relative;
-}
-
 .story {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 14px 0;
-  font-size: 12px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.story .imagem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 66px;
   width: 66px;
-  background-image: url('../assets/img/story-circle.svg');
-  
+  /*height: 86px;*/
+  gap: 1px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-around;
+
+  position: relative;
+  cursor: pointer;
+
+  text-align: center;
 }
 
-.story .imagem img {
+.story .backgroundStories {
+  width: 66px;
+  height: 66px;
+}
+
+.perfilStories {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
-}
-
-.story .usuario {
-  width: 66px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  height: 14px;
-}
-
-.stories .setinha {
   position: absolute;
-  right: 10px;
-  top: 45px;
+  top: 5px;
+  left: 5px;
+}
+
+/*Tudo sobre as publicações*/
+
+.publicacoes {
+  display: flex;
+  flex-direction: column;
+  /*gap: 60px; - coloca uma margem de 60 px infeior e superior*/
+}
+.postagem {
+  widows: 100%;
+  /*height: 749px;*/
+  background: #ffffff;
+
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+
+  margin-bottom: 60px;
+}
+
+.parteSup {
+  height: 62px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.publicador {
+  width: 300px;
   height: 32px;
+}
+.fotoPublicador {
   width: 32px;
-  color: #FFF;
-  font-size: 28px;
-  cursor: pointer;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.opcoes {
+  width: 22px;
+  height: 24px;
 }
 
 .post {
-  border-radius: 3px;
-  border: 1px solid #DBDBDB;
-  display: flex;
-  flex-direction: column;
-  margin-top: 18px;
-}
+  width: 612px;
 
-.post .topo {
-  display: flex;
-  justify-content: space-between;
-  padding: 13px 16px;
-  font-size: 14px;
-  font-weight: 500;
+  border-bottom: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  border: 1px 10px solid;
 }
-
-.post .topo .usuario, .post .topo .acoes {
-  display: flex;
-  align-items: center;
-}
-
-.post .topo img {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-}
-
-.post .usuario, .post .topo img, .post .fundo img, .post ion-icon, .post strong, .usuario ion-icon, .usuario > img, .conteudo > img {
-  cursor: pointer;
-}
-
-.post .conteudo img {
+.post img,
+.post video {
   width: 100%;
 }
 
-.post .fundo .acoes {
-  display: flex;
-  justify-content: space-between;
-  padding: 13px 16px;
-  font-size: 24px;
+.parteInf {
+  /*height: 74px;*/
+  min-height: 74px;
 }
 
-.post .fundo .acoes div:first-child ion-icon {
-  margin-right: 6px;
+.comentario {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.comentar {
+  height: 40px;
 }
 
-.post .fundo .curtidas {
-  display: flex;
-  align-items: center;
-  padding: 0 16px 13px;
-  font-weight: 300;
+.comentar button {
+  background: #ffffff;
+  color: #b2dffc;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
 }
 
-.post .fundo .curtidas img {
+.animacao:hover {
+  /*Ao passar o cursor, a "janelinha" muda de cor*/
+  color: #0095f6;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+}
+
+.escreverComentário input {
+  height: 36px;
+  width: 463px;
+
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ccc {
+  width: 93px;
+  height: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.salvar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.curtidas {
+  width: 333px;
+  height: 21px;
+}
+.fotoCurtiu {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  border-radius: 10px;
+}
+/*--------------------------------------*/
+
+/*side barr*/
+
+.cantoDireito {
+  width: 300px;
+  margin-left: 25px;
 }
 
-.post:last-child {
-  margin-bottom: 18px;
+.sideBar {
+  position: fixed;
+  width: 300px;
+  height: 444px;
+  margin-top: 34px;
 }
 
-.sidebar {
-  padding-top: 24px;
-  position: sticky;
-  top: 88px;
-  width: 293px;
+.meuPerfil {
+  width: 292px;
+  height: 57px;
+  margin-bottom: 30px;
 }
 
-.sidebar > .usuario {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar > .usuario img {
+.fotoPerfilSB {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
+  border-radius: 28px;
 }
 
-.sidebar > .usuario .texto {
-  display: flex;
-  flex-direction: column;
-  margin-left: 14px;
-  margin-bottom: 5px;
-  font-weight: 300;
+.sugestoes {
+  width: 292px;
+  height: 255px;
+  margin-bottom: 30px;
 }
 
-.sidebar > .usuario .texto strong {
-  font-weight: 700;
-  color: #262626;
+.sugPVc {
+  width: 292px;
+  height: 14px;
+  /*margin-bottom: 17px;*/
 }
 
-.sidebar .sugestoes .titulo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0 14px;
-}
-
-.sidebar .sugestoes .sugestao {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  height: 31px;
-  margin-bottom: 16px;
-}
-
-.sidebar .sugestoes .sugestao .usuario {
-  display: flex;
-}
-
-.sidebar .sugestoes img {
-  width: 32px;
+.sugestao {
+  width: 292px;
   height: 32px;
 }
 
-.sidebar .sugestoes .seguir {
-  color: #139EF2;
-  font-weight: 600;
+.pessoaSugerida {
+  width: auto;
+  height: 32px;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto {
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.seguir {
+  width: 60px;
+  height: 32px;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto :last-child {
-  color: #8E8E8E;
-  font-weight: 400;
+.seguir button {
+  width: 100%;
+  color: #ffffff;
+  background: #0f9bf7;
+  border-radius: 5px;
+  border: 0;
 }
 
-.links, .copyright {
-  font-size: 11px;
-  color: #C7C7C7;
-} 
-
-.links {
-  margin-top: 40px;
-  cursor: pointer;
+.sobreInstagram {
+  width: 292px;
+  height: 71px;
 }
 
-.copyright {
-  margin-top: 18px;
-}
-
-ion-icon {
-  visibility: visible;
-}
-
-.usuario ion-icon {
-  margin-left: 5px;
-  padding-top: 5px;
-  color: black;
-}
-
+/*--------------------------------------*/

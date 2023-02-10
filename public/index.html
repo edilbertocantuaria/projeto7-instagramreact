@@ -1,290 +1,518 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Inicio da responsividade-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Instagram</title>
-</head>
+    <!---Relizando o resset-->
+    <link href="css/reset.css" rel="stylesheet" />
 
-<body>
-  <div class="root">
-    <div class="navbar">
-      <div class="container">
-        <div class="logo">
-          <ion-icon name="logo-instagram"></ion-icon>
-          <div class="separador"></div>
-          <img src="assets/img/logo.png" alt="logo"/>
+    <!-- Invoca para que possa editar o css em outra "aba" dentro do projeto -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Coloca o ícone na aba-->
+    <link rel="icon" href="assets/instagram_logo.webp" />
+
+    <!--Importando as fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!--Importando as mediaquerries-->
+    <link rel="stylesheet" href="mediaQuery/querries.css" />
+
+    <title>Instagram</title>
+  </head>
+  <body>
+    <div class="header">
+      <!--Inicia a barraSuperior-->
+      <div class="barraSuperior SpaceAround">
+        <div class="menu e">
+          <div><ion-icon name="logo-instagram"></ion-icon></div>
+          <div class="barraVertical"></div>
+          <div>
+            <img src="assets/instagramNome.png" />
+          </div>
         </div>
 
-        <div class="pesquisa">
+        <div class="pesquisar">
+          <!--Cria uma "máscara", aquele texto que ao clicar no campo some-->
           <input type="text" placeholder="Pesquisar" />
         </div>
 
-        <div class="icones">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon name="compass-outline"></ion-icon>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="person-outline"></ion-icon>
-        </div>
-
-        <div class="icones-mobile">
-          <ion-icon name="paper-plane-outline"></ion-icon>
+        <div class="menu d">
+          <div><ion-icon name="paper-plane-outline"></ion-icon></div>
+          <div>
+            <ion-icon name="compass-outline" class="menuDireito"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="heart-outline" class="menuDireito"></ion-icon>
+          </div>
+          <div>
+            <ion-icon name="person-outline" class="menuDireito"></ion-icon>
+          </div>
         </div>
       </div>
-    </div>
+      <!--Fecha a barraSuperior-->
 
-    <div class="corpo">
-      <div class="esquerda">
+      <!--Inicia a barraSuperiorMobile-->
+      <div class="barraSuperiorMobile centVertHor">
+        <div><ion-icon name="logo-instagram"></ion-icon></div>
+
+        <div><img src="assets/instagramNome.png" /></div>
+
+        <div><ion-icon name="paper-plane-outline"></ion-icon></div>
+      </div>
+      <!--Fecha a barraSuperiorMobile-->
+    </div>
+    <!--Fecha a div header-->
+
+    <!--Inicia o feedInstagram -->
+    <main>
+      <!--Inicia o cantoEsquerdo, onde ficará a caixa dos stories e publicações-->
+      <div class="cantoEsquerdo">
+       
         <div class="stories">
+            <ion-icon name="chevron-forward-circle" class="setaStory"></ion-icon>
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/9gag.svg" alt="9gag"/>
-            </div>
-            <div class="usuario">
-              9gag
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img class="perfilStories" src="assets/imgs/stories/9gag.png" />
+
+            <h1>9gag</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/meowed.svg" alt="meowed"/>
-            </div>
-            <div class="usuario">
-              meowed
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img class="perfilStories" src="assets/imgs/stories/meowed.png" />
+            <h1>meowed</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/barked.svg" alt="barked"/>
-            </div>
-            <div class="usuario">
-              barked
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img class="perfilStories" src="assets/imgs/stories/barked.png" />
+            <h1>barked</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/nathanwpylestrangeplanet.svg" alt="nathanwpylestrangeplanet"/>
-            </div>
-            <div class="usuario">
-              nathanwpylestrangeplanet
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img
+              class="perfilStories"
+              src="assets/imgs/stories/nathanwpyle.png"
+            />
+            <h1>nathanwpyle</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/wawawicomics.svg" alt="wawawicomics"/>
-            </div>
-            <div class="usuario">
-              wawawicomics
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img
+              class="perfilStories"
+              src="assets/imgs/stories/wawawiwacomicsa.png"
+            />
+            <h1>wawawiwacomics</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/respondeai.svg" alt="respondeai"/>
-            </div>
-            <div class="usuario">
-              respondeai
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img class="perfilStories" src="assets/imgs/stories/respondeai.png" />
+            <h1>respondeai</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/filomoderna.svg" alt="filomoderna"/>
-            </div>
-            <div class="usuario">
-              filomoderna
-            </div>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img
+              class="perfilStories"
+              src="assets/imgs/stories/filomoderna.png"
+            />
+            <h1>filomoderna</h1>
           </div>
 
           <div class="story">
-            <div class="imagem">
-              <img src="assets/img/memeriagourmet.svg" alt="memeriagourmet"/>
-            </div>
-            <div class="usuario">
-              memeriagourmet
-            </div>
-          </div>
-
-          <div class="setinha">
-            <ion-icon name="chevron-forward-circle"></ion-icon>
+            <img
+              class="backgroundStories"
+              src="assets/imgs/stories/story_background.png"
+            />
+            <img
+              class="perfilStories"
+              src="assets/imgs/stories/memeriagourmet.png"
+            />
+            <h1>memeriagourmet</h1>
           </div>
         </div>
+        <!--Fecha a div dos stories-->
 
-        <div class="posts">
-          <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src="assets/img/meowed.svg" alt="meowed"/>
-                meowed
+        <!--Inicia a div das publicacoes, espaço onde ficará as postagens-->
+        <div class="publicacoes">
+          <div class="postagem">
+            <!--a div parteSup contem a foto do perfil, nome e as opções de quem publicou-->
+            <div class="parteSup">
+              <div class="publicador espHoriz espEsqPubli">
+                <img
+                  src="assets/imgs/quemPublicou/frases_pvoce_perfil.jpg"
+                  class="fotoPublicador"
+                />
+                <div class="centVert2 publi">
+                  <h1>frases_pvoce</h1>
+                </div>
               </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
+              <div class="opcoes espDirPubli centVertHor">
+                <ion-icon
+                  name="ellipsis-horizontal"
+                  class="iconePubli"
+                ></ion-icon>
               </div>
             </div>
-
-            <div class="conteudo">
-              <img src="assets/img/gato-telefone.svg" alt="gato-telefone"/>
+            <div class="post centVertHor">
+              <img src="assets/imgs/feed/frases_pvoce_20221008.jpeg" />
             </div>
-
-            <div class="fundo">
-              <div class="acoes">
-                <div>
+            <div class="parteInf">
+              <div class="reacoes espHoriz2">
+                <!--Curtir, comentar e compartilhar : ccc-->
+                <div class="menu ccc espEsqPubli">
                   <ion-icon name="heart-outline"></ion-icon>
                   <ion-icon name="chatbubble-outline"></ion-icon>
                   <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
-                <div>
+                <div class="salvar espDirPubli">
                   <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
               </div>
+              <!--Fecha a div das reações-->
+              <div class="curtidas espHoriz espEsqPubli">
+                <img
+                  src="assets/imgs/stories/respondeai.png"
+                  class="fotoCurtiu"
+                />
+                <h1 class="curtida">
+                  Curtido por <span> respondeai </span> e
+                  <span>outras 101.523 pessoas </span>
+                </h1>
+              </div>
+              <div class="comentario curtida espHoriz2 espEsqPubli espDirPubli">
+                <h1>
+                  <span>edilbertices</span> você aqui,
+                  <span class="mencao">@mozaoimaginario</span>
+                </h1>
+                <ion-icon name="heart" class="heartComent redHeart"></ion-icon>
+              </div>
+              <div class="comentario curtida espHoriz2 espEsqPubli espDirPubli">
+                <h1>
+                  <span>mozaoimagionario</span> woont, obrigado pelo reconhecimento! É muito difícil! 
+                 </h1>
+                <ion-icon name="heart-outline" class="heartComent"></ion-icon>
+              </div>
+              <div class="comentario curtida maisComentario espDirPubli espEsqPubli">
+                <h1>ver mais 1.350 comentários</h1>
+              </div>
+                <div class="comentar espHoriz2 espDirPubli espEsqPubli">
+                    <ion-icon name="happy-outline"></ion-icon>
+                    <div class="escreverComentário">
+                        <!--Cria uma "máscara", aquele texto que ao clicar no campo some-->
+                        <input type="text" placeholder="Digite um comentário" />
+                      </div>
+                      <button class="animacao">Comentar</button>
+                </div>
+                <!--Fecha a div curtidas-->
+              </div>
+              <!--Fecha a div da part inf-->
+            </div>
+            <!--Fecha a div da postagem-->
 
-              <div class="curtidas">
-                <img src="assets/img/respondeai.svg" alt="respondeai"/>
-                <div class="texto">
-                  Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+            <div class="postagem">
+              <!--a div parteSup contem a foto do perfil, nome e as opções de quem publicou-->
+              <div class="parteSup">
+                <div class="publicador espHoriz espEsqPubli">
+                  <img
+                    src="assets/imgs/quemPublicou/diogoparodias_perfil.jpg"
+                    class="fotoPublicador"
+                  />
+                  <div class="centVert2 publi">
+                    <h1>diogoparodias</h1>
+                    <h2>Onde a inveja não se cria</h2>
+                  </div>
+                </div>
+                <div class="opcoes espDirPubli centVertHor">
+                  <ion-icon
+                    name="ellipsis-horizontal"
+                    class="iconePubli"
+                  ></ion-icon>
                 </div>
               </div>
+              <div class="post centVertHor">
+                <video
+                  controls
+                  autoplay
+                  muted
+                  preload
+                  loop
+                  src="assets/imgs/feed/anitta_pabllo_diogoparodias.mp4"
+                  type="video/mp4"
+                  class="post"
+                ></video>
+              </div>
+              <div class="parteInf">
+                <div class="reacoes espHoriz2">
+                  <!--Curtir, comentar e compartilhar : ccc-->
+                  <div class="menu ccc espEsqPubli">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                  </div>
+                  <div class="salvar espDirPubli">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </div>
+                </div>
+                <!--Fecha a div das reações-->
+                <div class="curtidas espHoriz espEsqPubli">
+                  <img
+                    src="assets/imgs/stories/respondeai.png"
+                    class="fotoCurtiu"
+                  />
+                  <h1 class="curtida">
+                    Curtido por <span> respondeai </span> e
+                    <span>outras 101.523 pessoas </span>
+                  </h1>
+                </div>
+                <!--Fecha a div curtidas-->
+              </div>
+              <!--Fecha a div da part inf-->
+            </div>
+            <!--Fecha a div da postagem-->
+
+            <div class="postagem">
+              <!--a div parteSup contem a foto do perfil, nome e as opções de quem publicou-->
+              <div class="parteSup">
+                <div class="publicador espHoriz espEsqPubli">
+                  <img
+                    src="assets/imgs/quemPublicou/edilbertices_perfil.jpg"
+                    class="fotoPublicador"
+                  />
+                  <div class="centVert2 publi">
+                    <h1>edilbertices</h1>
+                    <h2>Dóndé cótô</h2>
+                  </div>
+                </div>
+                <div class="opcoes espDirPubli centVertHor">
+                  <ion-icon
+                    name="ellipsis-horizontal"
+                    class="iconePubli"
+                  ></ion-icon>
+                </div>
+              </div>
+              <div class="post centVertHor">
+                <img src="assets/imgs/feed/gato_preto.jpg" class="post" />
+              </div>
+              <div class="parteInf">
+                <div class="reacoes espHoriz2">
+                  <!--Curtir, comentar e compartilhar : ccc-->
+                  <div class="menu ccc espEsqPubli">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                  </div>
+                  <div class="salvar espDirPubli">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </div>
+                </div>
+                <!--Fecha a div das reações-->
+                <div class="curtidas espHoriz espEsqPubli">
+                  <img
+                    src="assets/imgs/quemPublicou/edilbertices_perfil.jpg"
+                    class="fotoCurtiu"
+                  />
+                  <h1 class="curtida">
+                    Curtido por <span> respondeai </span> e
+                    <span>outras 101.523 pessoas </span>
+                  </h1>
+                </div>
+                <!--Fecha a div curtidas-->
+              </div>
+              <!--Fecha a div da part inf-->
+            </div>
+            <!--Fecha a div da postagem-->
+          </div>
+          <!--Fecha a div das publicacoes-->
+        </div>
+        <!--Fecha a div do canto esquerdo-->
+
+        <div class="cantoDireito">
+          <!--Inicia o sideBar, onde ficará as sugestões de perfil e outras infos-->
+          <div class="sideBar centHor">
+            <div class="meuPerfil">
+              <div class="espHoriz espEsqPubli2">
+                <img
+                  src="assets/imgs/quemPublicou/edilbertices_perfil.jpg"
+                  class="fotoPerfilSB"
+                />
+                <div class="espDirPubli centVert2 publi">
+                  <h1>edilbertices</h1>
+                  <h2>Beto Cantuária</h2>
+                </div>
+              </div>
+            </div>
+            <div class="sugestoes centVert">
+              <div class="sugPVc espHoriz2">
+                <h1>Sugestões para você</h1>
+                <h2>Ver tudo</h2>
+              </div>
+
+              <div class="sugestao">
+                <div class="centVertHor2">
+                  <div class="pessoaSugerida">
+                    <div class="espHoriz espEsqPubli2">
+                      <img
+                        src="assets/imgs/quemPublicou/rodrigo_hilberth_perfil.jpg"
+                        class="fotoPublicador"
+                      />
+                      <div class="espEsqPubli">
+                        <h1>rodrigohilberth</h1>
+                        <h2>Segue você</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="seguir centVert3">
+                    <button>Seguir</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sugestao">
+                <div class="centVertHor2">
+                  <div class="pessoaSugerida">
+                    <div class="espHoriz espEsqPubli2">
+                      <img
+                        src="assets/imgs/quemPublicou/britney_spears_perfil.jpg"
+                        class="fotoPublicador"
+                      />
+                      <div class="espEsqPubli">
+                        <h1 class="publi3">britneyspears</h1>
+                        <h2>Segue você</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="seguir centVert3">
+                    <button>Seguir</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sugestao">
+                <div class="centVertHor2">
+                  <div class="pessoaSugerida">
+                    <div class="espHoriz espEsqPubli2">
+                      <img
+                        src="assets/imgs/quemPublicou/bill_gates_perfil.jpg"
+                        class="fotoPublicador"
+                      />
+                      <div class="espEsqPubli">
+                        <h1 class="publi3">thisisbillgates</h1>
+                        <h2>Dos seus contatos</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="seguir centVert3">
+                    <button>Seguir</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sugestao">
+                <div class="centVertHor2">
+                  <div class="pessoaSugerida">
+                    <div class="espHoriz espEsqPubli2">
+                      <img
+                        src="assets/imgs/quemPublicou/apple_perfil.jpg"
+                        class="fotoPublicador"
+                      />
+                      <div class="espEsqPubli">
+                        <h1 class="publi3">apple</h1>
+                        <h2>Dos seus contatos</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="seguir centVert3">
+                    <button>Seguir</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sugestao">
+                <div class="centVertHor2">
+                  <div class="pessoaSugerida">
+                    <div class="espHoriz espEsqPubli2">
+                      <img
+                        src="assets/imgs/quemPublicou/gloria_groove_perfil.jpg"
+                        class="fotoPublicador"
+                      />
+                      <div class="espEsqPubli">
+                        <h1 class="publi3">gloriagroove</h1>
+                        <h2>Te visitou recentemente</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="seguir centVert3">
+                    <button>Seguir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Fecha a div de sugestoes -->
+
+            <div class="sobreInstagram">
+              <h1>
+                Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
+                Termos • Localizações • Contas mais relevantes • Hashtags •
+                Idioma
+              </h1>
+              <h1>© 2021 INSTAGRAM DO FACEBOOK</h1>
             </div>
           </div>
-
-          <div class="post">
-            <div class="topo">
-              <div class="usuario">
-                <img src="assets/img/barked.svg" alt="barked"/>
-                barked
-              </div>
-              <div class="acoes">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </div>
-            </div>
-
-            <div class="conteudo">
-              <img src="assets/img/dog.svg" alt="dog" />
-            </div>
-
-            <div class="fundo">
-              <div class="acoes">
-                <div>
-                  <ion-icon name="heart-outline"></ion-icon>
-                  <ion-icon name="chatbubble-outline"></ion-icon>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </div>
-                <div>
-                  <ion-icon name="bookmark-outline"></ion-icon>
-                </div>
-              </div>
-
-              <div class="curtidas">
-                <img src="assets/img/adorable_animals.svg" alt="adorable_animals"/>
-                <div class="texto">
-                  Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!--Fecha o sideBar-->
         </div>
       </div>
+      <!--Fecha a div cantoDireito-->
 
-      <div class="sidebar">
-        <div class="usuario">
-          <img src="assets/img/catanacomics.svg" alt="imagem de perfil"/>
-          <div class="texto">
-            <span>
-              <strong>catanacomics</strong>
-              <ion-icon name="pencil"></ion-icon>
-            </span>
-          </div>
-        </div>
+      <!--Fecha a div feed-->
+    </main>
 
-        <div class="sugestoes">
-          <div class="titulo">
-            Sugestões para você
-            <div>Ver tudo</div>
-          </div>
+    <footer>
+      <!--Inicia a barraInferiorMobile-->
+      <div class="barraInferiorMobile centVertHor">
+        <div><ion-icon name="home"></ion-icon></div>
 
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/bad.vibes.memes.svg" alt="bad.vibes.memes.svg"/>
-              <div class="texto">
-                <div class="nome">bad.vibes.memes</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
+        <div><ion-icon name="search-outline"></ion-icon></div>
 
-            <div class="seguir">Seguir</div>
-          </div>
+        <div><ion-icon name="add-circle-outline"></ion-icon></div>
 
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/chibirdart.svg" alt="chibirdart"/>
-              <div class="texto">
-                <div class="nome">chibirdart</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
+        <div><ion-icon name="heart-outline"></ion-icon></div>
 
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/razoesparaacreditar.svg" alt="razoesparaacreditar" />
-              <div class="texto">
-                <div class="nome">razoesparaacreditar</div>
-                <div class="razao">Novo no Instagram</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/adorable_animals.svg" alt="adorable_animals"/>
-              <div class="texto">
-                <div class="nome">adorable_animals</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-
-          <div class="sugestao">
-            <div class="usuario">
-              <img src="assets/img/smallcutecats.svg" alt="smallcutecats"/>
-              <div class="texto">
-                <div class="nome">smallcutecats</div>
-                <div class="razao">Segue você</div>
-              </div>
-            </div>
-
-            <div class="seguir">Seguir</div>
-          </div>
-        </div>
-
-        <div class="links">
-          Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
-          Hashtags • Idioma
-        </div>
-
-        <div class="copyright">
-          © 2021 INSTAGRAM DO FACEBOOK
-        </div>
+        <div><ion-icon name="person-outline"></ion-icon></div>
       </div>
-    </div>
-  </div>
+      <!--Fecha a barraInferiorMobile-->
+    </footer>
 
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
 </html>
