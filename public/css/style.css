@@ -25,7 +25,9 @@ body {
 ion-icon {
   font-size: 22px;
 }
-
+.pen-edit{
+  font-size: 20px;
+}
 .setaStory {
   color: #ffffff;
 
