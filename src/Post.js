@@ -35,11 +35,11 @@ const post =[
 return(
     <div class="publicacoes">
 {post.map((info) => (
-             <div class="postagem">
+             <div data-test="post" class="postagem">
              
              <div class="parteSup">
                <div class="publicador espHoriz espEsqPubli">
-                 <img
+                 <img  data-test="post-image"
                    src={info.fotoUser}
                    class="fotoPublicador"
                  />
@@ -62,12 +62,12 @@ return(
                <div class="reacoes espHoriz2">
                  
                  <div class="menu ccc espEsqPubli">
-                   <ion-icon name="heart-outline"></ion-icon>
+                   <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
                    <ion-icon name="chatbubble-outline"></ion-icon>
                    <ion-icon name="paper-plane-outline"></ion-icon>
                  </div>
                  <div class="salvar espDirPubli">
-                   <ion-icon name="bookmark-outline"></ion-icon>
+                   <ion-icon data-test="save-post" name="bookmark-outline"></ion-icon>
                  </div>
                </div>
                
@@ -76,7 +76,7 @@ return(
                    src={info.fotoCurtiu}
                    class="fotoCurtiu"
                  />
-                 <h1 class="curtida">
+                 <h1 data-test="likes-number" class="curtida">
                  Curtido por <span> {info. quemCurtiu}</span> e <span> outras {info.numCurtidas} pessoas</span>
                  </h1>
                </div>

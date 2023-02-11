@@ -51,6 +51,10 @@ ion-icon {
 .redHeart {
   color: red;
 }
+
+.user-icon{
+  width: 120%;
+}
 /*--------------------------------------*/
 
 /*Ajustes textuais*/
