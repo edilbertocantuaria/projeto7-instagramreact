@@ -311,9 +311,7 @@ ion-icon {
 main {
   display: flex;
   justify-content: center;
-
   background: #fafafa;
-
   margin-top: 54px;
   margin-bottom: 54px;
 }
