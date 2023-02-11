@@ -1,4 +1,10 @@
-export default function post(){
+import React from "react";
+
+
+export default function Post(){
+  const [salvarPost, setSalvarPost] = React.useState(false);
+  const [curtirPost, setCurtirPost] = React.useState(false);
+
 const post =[
     {
         fotoUser:"assets/imgs/quemPublicou/frases_pvoce_perfil.jpg",
@@ -33,7 +39,7 @@ const post =[
     
 ]
 return(
-    <div class="publicacoes">
+    <>
 {post.map((info) => (
              <div data-test="post" class="postagem">
              
@@ -62,12 +68,21 @@ return(
                <div class="reacoes espHoriz2">
                  
                  <div class="menu ccc espEsqPubli">
-                   <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
+                   {/* <ion-icon data-test="like-post" name="heart-outline"
+                    
+                    onClick={() => setCurtirPost(!curtirPost)}
+                    ></ion-icon> */}
+                    <ion-icon data-test="like-post" name={curtirPost ? "heart" : "heart-outline"}
+            class={`${curtirPost ? "redHeart" : ""}`}
+            onClick={() => setCurtirPost(!curtirPost)}
+  ></ion-icon>
                    <ion-icon name="chatbubble-outline"></ion-icon>
                    <ion-icon name="paper-plane-outline"></ion-icon>
                  </div>
                  <div class="salvar espDirPubli">
-                   <ion-icon data-test="save-post" name="bookmark-outline"></ion-icon>
+                   <ion-icon data-test="save-post" name={salvarPost [info.srcPost]? "bookmark" : "bookmark-outline"}
+                   className={`${salvarPost [info.srcPost]? "postSalvo" : ""}`}
+                   onClick={() => setSalvarPost( {salvarPost, [info.srcPost]: !salvarPost[info.srcPost]})}></ion-icon>
                  </div>
                </div>
                
@@ -85,6 +100,6 @@ return(
              
            </div>
   ))}
-</div>
+</>
 )
 }

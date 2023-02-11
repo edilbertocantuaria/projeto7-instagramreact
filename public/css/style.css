@@ -48,8 +48,21 @@ ion-icon {
   font-size: 12px;
 }
 
-.redHeart {
-  color: red;
+/* .redHeart{
+    fill: #ff0000  ;
+} */
+
+.redHeart{
+  color: #ff0000  ;
+}
+
+.whiteHeart {
+  color: white;
+
+}
+
+.postSalvo{
+  color: black;
 }
 
 .user-icon{
