@@ -52,17 +52,8 @@ ion-icon {
     fill: #ff0000  ;
 } */
 
-.redHeart{
+ion-icon .redHeart{
   color: #ff0000  ;
-}
-
-.whiteHeart {
-  color: white;
-
-}
-
-.postSalvo{
-  color: black;
 }
 
 .user-icon{
