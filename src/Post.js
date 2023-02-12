@@ -29,7 +29,7 @@ function daLike(){
 }
 
 function likeImagem(event){
-  if (event.detail=== 2){
+  if (event.type === 'dblclick'){
     setAnimacacao(true)
     if (liked === false){
       setContador(contador+1)
@@ -62,7 +62,7 @@ function likeImagem(event){
                </div>
              </div>
              <div class="post centVertHor">
-               <img src={srcPost} onClick={likeImagem} class="post" />
+               <img src={srcPost} onDoubleClick={likeImagem} class="post" />
                <ion-icon class={`coracao ${animacao ? "scale-up-center" : "invisible"}`} name="heart"></ion-icon>
              </div>
              <div class="parteInf">
