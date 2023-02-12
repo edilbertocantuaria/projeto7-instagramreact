@@ -17,7 +17,7 @@ export default function Post(props){
   const [salvarPost, setSalvarPost] = React.useState(salvo);
   const [liked, setLiked] = React.useState(curtido);
   const [contador, setContador]=React.useState(numCurtidas);
-
+  const [animacao, setAnimacacao] = React.useState(false)
 
 function daLike(){
   if (liked === true){
@@ -27,6 +27,18 @@ function daLike(){
   }
   setLiked(!liked)
 }
+
+function likeImagem(event){
+  if (event.detail=== 2){
+    setAnimacacao(true)
+    if (liked === false){
+      setContador(contador+1)
+      setLiked(true)
+    }
+  } setTimeout(()=>{
+    setAnimacacao(false)}, 500)
+  }
+
 
   return(
              <div data-test="post" class="postagem">
@@ -50,7 +62,8 @@ function daLike(){
                </div>
              </div>
              <div class="post centVertHor">
-               <img src={srcPost} class="post" />
+               <img src={srcPost} onClick={likeImagem} class="post" />
+               <ion-icon class={`coracao ${animacao ? "scale-up-center" : "invisible"}`} name="heart"></ion-icon>
              </div>
              <div class="parteInf">
                <div class="reacoes espHoriz2">
@@ -61,7 +74,6 @@ function daLike(){
                   data-test="like-post"
                   onClick ={() => daLike()}
                   name={liked ? "heart" : "heart-outline"}
-                  // className={liked? "redheart md hydrated":"redheart md hydrated"}
                   class={liked? "redHeart md hydrated":"whiteHeart md hydrated"}>
                   </ion-icon></div>
                    <div><ion-icon name="chatbubble-outline"></ion-icon></div>

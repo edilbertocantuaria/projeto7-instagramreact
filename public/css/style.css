@@ -476,6 +476,27 @@ main {
   -webkit-transition: -webkit-transform 300ms ease;
   transition: transform 300ms ease;
 }
+.coracao {
+  width: 150px;
+  height: 150px;
+  color: white;
+  visibility: visible;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none; 
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.scale-up-center {
+  animation: scale-up-center 0.3s;
+}
 
 .escreverComentário input {
   height: 36px;
