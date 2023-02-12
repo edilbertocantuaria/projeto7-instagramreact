@@ -43,17 +43,12 @@ ion-icon {
   font-size: 16px;
 }
 
-.heartComent {
-  color: #dbdbdb;
-  font-size: 12px;
+ion-icon.redHeart{
+  color: #ff0000  !important;
 }
 
-/* .redHeart{
-    fill: #ff0000  ;
-} */
-
-ion-icon .redHeart{
-  color: #ff0000  ;
+ion-icon.blackHeart{
+  color: #000000  !important;
 }
 
 .user-icon{

@@ -33,7 +33,7 @@ export default function Sugestao(){
     ]
 
     return(
-        <div class="sugestaoReact ">
+        <>
             {sugestao.map ((info) =>
             <div class="sugestao">  
         <div class="centVertHor2">
@@ -52,6 +52,6 @@ export default function Sugestao(){
         </div>
         </div>
             )}
-        </div>
+        </>
     )
 }
