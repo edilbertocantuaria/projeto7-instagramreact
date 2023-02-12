@@ -47,13 +47,11 @@ ion-icon {
 .redHeart{
   display: block;
   color: #ff0000  !important;
-  background-color: pink;
 }
 
 .whiteHeart{
   /* apenas as bordas pretas */
   color: #000000  !important;
-  background-color: grey;
 }
 
 .user-icon{

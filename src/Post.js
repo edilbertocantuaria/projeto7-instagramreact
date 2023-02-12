@@ -61,7 +61,8 @@ function daLike(){
                   data-test="like-post"
                   onClick ={() => daLike()}
                   name={liked ? "heart" : "heart-outline"}
-                  className={liked? "redHeart":"whiteHeart"}>
+                  // className={liked? "redheart md hydrated":"redheart md hydrated"}
+                  class={liked? "redHeart md hydrated":"whiteHeart md hydrated"}>
                   </ion-icon></div>
                    <div><ion-icon name="chatbubble-outline"></ion-icon></div>
                    <div><ion-icon name="paper-plane-outline"></ion-icon></div>
