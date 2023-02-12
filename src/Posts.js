@@ -10,8 +10,8 @@ export default function Posts(){
             fotoCurtiu:"assets/imgs/quemPublicou/edilbertices_perfil.jpg",
             quemCurtiu:"edilbertices ",
             numCurtidas:101523,
-            salvo: true,
-            curtido: true
+            salvo: false,
+            curtido: false
         },
     
         {
