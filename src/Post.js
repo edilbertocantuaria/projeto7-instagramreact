@@ -17,16 +17,17 @@ export default function Post(props){
   const [salvarPost, setSalvarPost] = React.useState(salvo);
   const [liked, setLiked] = React.useState(curtido);
   const [contador, setContador]=React.useState(numCurtidas);
-  const [animacao, setAnimacao] = React.useState(false);
+
 
 function daLike(){
   if (liked === true){
-    setContador(contador+1)
-  } else {
     setContador(contador-1)
+  } else {
+    setContador(contador+1)
   }
   setLiked(!liked)
 }
+
   return(
              <div data-test="post" class="postagem">
              
@@ -56,11 +57,11 @@ function daLike(){
                  
                  <div class="menu ccc espEsqPubli">
 
-                <div><ion-icon
+                 <div><ion-icon
                   data-test="like-post"
-                  onClick ={daLike}
+                  onClick ={() => daLike()}
                   name={liked ? "heart" : "heart-outline"}
-                  class={liked? "redHeart":"blackHeart"}>
+                  className={liked? "redHeart":"whiteHeart"}>
                   </ion-icon></div>
                    <div><ion-icon name="chatbubble-outline"></ion-icon></div>
                    <div><ion-icon name="paper-plane-outline"></ion-icon></div>
@@ -81,7 +82,7 @@ function daLike(){
                    class="fotoCurtiu"
                  />
                  <h1 data-test="likes-number" class="curtida">
-                 Curtido por <span> {quemCurtiu}</span> e <span> outras {numCurtidas} pessoas</span>
+                 Curtido por <span> {quemCurtiu}</span> e <span> outras {contador} pessoas</span>
                  </h1>
                </div>
                
